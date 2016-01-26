@@ -1,6 +1,6 @@
 {
     "name": "kamalyon/wp-nonce",
-    "description": "This plugins enables the wordpress nonce function in an object-oriented environment.",
+    "description": "This plugin enables the wordpress nonce function in an object-oriented environment.",
     "keywords": ["wordpress", "plugin", "nonce", "kamalyon"],
     "homepage": "https://github.com/kamalyon/wp-nonce",
     "type": "wordpress-plugin",

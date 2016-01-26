@@ -79,7 +79,7 @@ if (!class_exists('Wp_Nonce')) {
 		 * @param string $action Optional. Action name. Should give the context to what is taking place. (Since 2.0.1). Default: -1
 		 * @param string $query_arg Optional. Where to look for nonce in the $_REQUEST PHP variable. (Since 2.5). Default: '_wpnonce'
 		 */
-		public function adminReferer($action = -1, $query_arg = '_wpnonce') {
+		public function checkAdminReferer($action = -1, $query_arg = '_wpnonce') {
 			return check_admin_referer($action, $query_arg);
 		}
 		
