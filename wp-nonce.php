@@ -15,7 +15,7 @@ if (!class_exists('Wp_Nonce')) {
 		/**
 		 * Wp_Nonce constructor
 		 */
-		protected function __construct() {
+		public function __construct() {
 		}
 	
 		/**

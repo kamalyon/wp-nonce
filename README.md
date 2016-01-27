@@ -24,13 +24,13 @@ $nonce = $Wp_Nonce->createNonce('my-nonce');
 Prints nonce input field
 ```php
 $Wp_Nonce = new Wp_Nonce();
-Wp_Nonce->nonceField('name_of_my_action', 'name_of_nonce_field');
+$Wp_Nonce->nonceField('name-of-my-action', 'name-of-nonce-field');
 ```
 
 Create nonce url 
 ```php
 $Wp_Nonce = new Wp_Nonce();
-$url = Wp_Nonce->nonceURL('http://my-url.com', 'doing_something', 'my_nonce');
+$url = $Wp_Nonce->nonceURL('http://my-url.com', 'doing-something', 'my-nonce');
 ```
 
 Verify nonce
@@ -47,7 +47,7 @@ if ($Wp_Nonce->verifyNonce($nonce, 'my-nonce')) {
 Check admin referer
  ```php
  $Wp_Nonce = new Wp_Nonce();
- if ($Wp_Nonce->checkAdminReferer('name_of_my_action', 'name_of_nonce_field')) {
+ if ($Wp_Nonce->checkAdminReferer('name-of-my-action', 'name-of-nonce-field')) {
     //OK
  }else{
     //KO
