@@ -54,3 +54,53 @@ Check admin referer
  }
  ```
  
+##How to run Unit Tests
+
+1) Install WordPress developer suite
+```
+// Make the directory for the tools (assumes that ~/svn exists; 
+// you can create it by running "$ mkdir ~/svn")
+$ mkdir ~/svn/wordpress-dev
+ 
+// Change to the new directory we just made.
+$ cd ~/svn/wordpress-dev
+ 
+// Check out the developer tools with SVN.
+$ svn co http://develop.svn.wordpress.org/trunk/
+```
+
+2) Check the WordPress developer suite is working properly
+```
+// Change to the trunk directory.
+$ cd ~/svn/wordpress-dev/trunk/
+ 
+// Make sure the checkout is up to date.
+$ svn up
+ 
+// Run all of the tests.
+$ phpunit
+ 
+// Run only, e.g., the cache tests.
+$ phpunit tests/phpunit/tests/cache
+```
+
+3) Install this plugin
+```
+composer require kamalyon/wp-nonce
+```
+
+4) Change the paths in the bootstrap.php file of the plugin
+```
+// The path to the WordPress tests checkout.
+define( 'WP_TESTS_DIR', '/Users/me/workspace/wordpress-dev/trunk/tests/phpunit/' );
+// The path to the main file of the plugin to test.
+define( 'TEST_PLUGIN_FILE', '/Users/me/workspace/wp-nonce/wp-nonce.php' );
+ ```
+ 
+5) Run the unit tests
+ ```
+// Go to the plugin's folder
+cd /Users/me/workspace/wp-nonce/
+// Run the tests
+phpunit
+ ```

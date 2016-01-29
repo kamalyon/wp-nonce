@@ -1,5 +1,5 @@
 <phpunit backupGlobals="false"
-         bootstrap="./autoload.php"
+         bootstrap="bootstrap.php"
          colors="true">
     <testsuites>
         <testsuite>

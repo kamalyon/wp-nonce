@@ -37,8 +37,7 @@ if (!class_exists('Wp_Nonce')) {
 		 * @param boolean $echo Optional. Whether to display or return the nonce hidden form field, and also the referer hidden form field if the $referer argument is set to true. Default: true
 		 */
 		public function nonceField($action = -1, $name = '_wpnonce', $referer = true, $echo = true) {
-			wp_nonce_field($action, $name, $referer, $echo);
-			return true;
+			return wp_nonce_field($action, $name, $referer, $echo);
 		}
 		
 		/**
